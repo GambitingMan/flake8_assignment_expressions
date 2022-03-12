@@ -1,0 +1,9 @@
+# Testing
+pytest
+coverage[toml]
+
+# Code quality
+black
+isort
+mypy
+pre-commit

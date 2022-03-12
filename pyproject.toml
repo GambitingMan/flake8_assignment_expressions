@@ -1,0 +1,20 @@
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.black]
+include = 'flake8_assignment_expressions.py|tests/.*\.py$'
+
+[tool.mypy]
+ignore_missing_imports = true
+strict = true
+
+[tool.coverage.run]
+command_line = "-m pytest"
+source = ["flake8_assignment_expressions.py"]
+
+[tool.coverage.report]
+show_missing = true
