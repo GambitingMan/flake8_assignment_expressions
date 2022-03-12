@@ -5,16 +5,15 @@ profile = "black"
 addopts = "-q"
 testpaths = ["tests"]
 
-[tool.black]
-include = 'flake8_assignment_expressions.py|tests/.*\.py$'
-
 [tool.mypy]
 ignore_missing_imports = true
 strict = true
+exclude = "^tests/.*.py|venv"
 
 [tool.coverage.run]
 command_line = "-m pytest"
-source = ["flake8_assignment_expressions.py"]
+omit = ["tests/*.py", "setup.py"]
 
 [tool.coverage.report]
 show_missing = true
+fail_under = 100
